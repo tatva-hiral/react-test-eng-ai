@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import TablePagination from '@material-ui/core/TablePagination';
 import PropTypes from 'prop-types';
 // import custsom components
 import Header from '../../components/Header';
@@ -79,22 +80,13 @@ function Home(props) {
 
   return (
     <div id="App">
-      <Header />
+      <Header title={'Posts'} />
       <div className={classes.root}>
         {posts && posts.length > 0 ? (
-          <Grid container spacing={3} direction="row" justify="flex-start" alignItems="center">
+          <Grid item container spacing={3} direction="row" justify="flex-start" alignItems="center">
             {posts.map(post => (
-              <Grid
-                item
-                xs={12}
-                md={4}
-                lg={3}
-                spacing={3}
-                direction="row"
-                justify="flex-start"
-                alignItems="center"
-              >
-                <PostCard key={post.objectID} posts={post} viewMore={() => handleViewMore(post)} />
+              <Grid key={Math.random()} item xs={12} md={4} lg={3}>
+                <PostCard posts={post} viewMore={() => handleViewMore(post)} />
               </Grid>
             ))}
           </Grid>

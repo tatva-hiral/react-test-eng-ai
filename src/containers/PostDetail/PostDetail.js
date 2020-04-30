@@ -25,10 +25,9 @@ function PostDetail(props) {
   const classes = useStyles();
   const { location } = props;
   if (location && location.state && location.state.post) {
-    console.log('props', props);
     return (
       <div className="post-detail">
-        <Header />
+        <Header title={'Post Detail'}/>
         <div className={classes.root}>
           <Grid container spacing={3} justify="flex-start" alignItems="center">
             <Grid

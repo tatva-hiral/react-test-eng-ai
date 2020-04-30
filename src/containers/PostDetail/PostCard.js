@@ -33,11 +33,13 @@ export default function PostCard(props) {
           <Typography gutterBottom variant="h5" component="h2">
             {posts && posts.title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            <Link href={posts && posts.url} target="_blank" rel="noreferrer">
-              {posts && posts.url}
-            </Link>
-          </Typography>
+          {posts && posts.url && (
+            <Typography variant="body2" color="textSecondary" component="p">
+              <Link href={posts && posts.url} target="_blank" rel="noreferrer">
+                {posts && posts.url}
+              </Link>
+            </Typography>
+          )}
           <Typography variant="body2" color="textSecondary" component="p">
             Date: {posts && posts.created_at}
           </Typography>
