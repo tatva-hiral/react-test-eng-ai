@@ -1,6 +1,6 @@
 ## React Test App
 
-This is the test application to show the post listing. This applicatin is built with React Hooks, Material UI and Redux. We have used our awn created react base repo to begin with this test application which by default includes support to ES6. We have used airbnb eslint configuration in react development.
+This is the test application to show the post listing. This application is built with React Hooks, Material UI and Redux. We have used own created react base repo to begin with this test application which by default includes support to ES6. We have used airbnb eslint configuration in react development.
 
 ## Quickstart
 
